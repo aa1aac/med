@@ -27,7 +27,7 @@ const NavigationBar = (props) => {
         </Nav>
         <Nav className="ml-auto">
           <button
-            className="nav-item btn btn-outline-secondary"
+            className="nav-item btn btn-secondary"
             onClick={UserContext.userLogout}
           >
             Logout

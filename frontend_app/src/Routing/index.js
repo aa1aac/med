@@ -17,8 +17,9 @@ export default () => {
 
   return (
     <>
+      <PrivateRoute path="/home" exact component={HomePage} />
+
       <NonPrivateRoute path="/" exact component={IndexPage} />
-      <PrivateRoute path="/" exact component={HomePage} />
     </>
   );
 };

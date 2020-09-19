@@ -55,7 +55,7 @@ const UserState = (props) => {
 
   const userLogout = () => {
     axios
-      .post("/api/v1/logout/")
+      .post("/api/v1/user/logout/")
       .then(() => {
         dispatch({ type: LOGOUT_USER });
         localStorage.removeItem("token");
