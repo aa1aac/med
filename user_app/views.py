@@ -23,7 +23,7 @@ class DonorListView(APIView):
         return Response(serializer.data) 
 
 
-class CompatibleDonorListView(APIView):
+class MatchingDonorListView(APIView):
 
     permission_classes = [permissions.IsAuthenticated]
 
