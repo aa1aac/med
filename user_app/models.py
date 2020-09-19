@@ -33,7 +33,7 @@ class CustomUser(AbstractUser):
         (BG_O_POS, BG_O_POS),
         (BG_A_NEG, BG_A_NEG),
         (BG_B_NEG, BG_B_NEG),
-        (BG_AB_BEG, BG_AB_NEG),
+        (BG_AB_NEG, BG_AB_NEG),
         (BG_O_NEG, BG_O_NEG),
     )
 
@@ -43,6 +43,8 @@ class CustomUser(AbstractUser):
         blank=True
     )
     
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
     objects = CustomUserManager()
 
     def __str__(self):
