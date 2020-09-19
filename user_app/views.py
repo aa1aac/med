@@ -23,7 +23,7 @@ class DonorListView(APIView):
         return Response(serializer.data) 
 
 
-class MatchingDonorListView(APIView):
+class CompatibleDonorListView(APIView):
 
     permission_classes = [permissions.IsAuthenticated]
 
@@ -31,3 +31,4 @@ class MatchingDonorListView(APIView):
         queryset = CustomUser.objects.filter(blood_group=blood_group)
         serializer = DonorUserSerializer(queryset, many=True)
         return Response(serializer.data)
+
