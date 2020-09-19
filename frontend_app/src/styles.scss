@@ -32,3 +32,28 @@ $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+.index_hero {
+  width: 100%;
+  height: 40em;
+  margin-bottom: 1em;
+  background-image: url(/static/frontend/image/1.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  h1 {
+    font-weight: 700;
+    color: $white;
+  }
+
+  button.cta {
+    font-weight: 700;
+    color: $white;
+    margin: 1em;
+    width: 6em;
+    border-radius: 2em;
+    color: black;
+    padding: 0.4em;
+  }
+}
