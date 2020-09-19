@@ -1,0 +1,33 @@
+{
+  "name": "med",
+  "version": "1.0.0",
+  "description": "the frontend of the med project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./frontend_app/src/index.js --output ./frontend_app/static/frontend/main.js",
+    "build": "webpack --mode production ./frontend_app/src/index.js --output ./frontend_app/static/frontend/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aa1aac/med.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aa1aac/med/issues"
+  },
+  "homepage": "https://github.com/aa1aac/med#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
