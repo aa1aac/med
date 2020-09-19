@@ -3,6 +3,7 @@ from user_app.serializers import UserSerializer, DonorUserSerializer
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import permissions
 from .models import CustomUser
 
 
@@ -13,6 +14,8 @@ class UserDetailView(APIView):
 
 
 class DonorListView(APIView):
+
+    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, format=None):
         queryset = CustomUser.objects.filter(wants_to_donate=True)
