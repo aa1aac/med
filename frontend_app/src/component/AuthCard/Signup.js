@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+import userContext from "../../context/user/UserContext";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -6,10 +8,19 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
 
+  const UserContext = useContext(userContext);
+
   const onSubmit = (e) => {
     e.preventDefault();
 
-    console.log("signup");
+    if (name && email && password && confirm) {
+      UserContext.userSignup({
+        full_name: name,
+        email,
+        password1: password,
+        password2: confirm,
+      });
+    }
   };
 
   return (

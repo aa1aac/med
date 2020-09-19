@@ -68,12 +68,13 @@ const UserState = (props) => {
       });
   };
 
-  const userSignup = ({ email, password1, password2, fullname }) => {
+  const userSignup = ({ email, password1, password2, full_name }) => {
     axios
       .post("/api/v1/user/signup/", {
         email,
         password1,
         password2,
+        full_name,
       })
       .then((res) => {
         dispatch({ type: SIGNUP_USER, payload: res.data.key });

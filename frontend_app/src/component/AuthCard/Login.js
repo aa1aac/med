@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
+import userContext from '../../context/user/UserContext'
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const UserContext = useContext(userContext)
+
   const onLogin = (e) => {
     e.preventDefault();
 
     if (email && password) {
-      console.log("LOGIN user");
+      UserContext.userLogin({email, password})
     }
   };
 

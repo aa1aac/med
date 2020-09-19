@@ -11,12 +11,6 @@ const IndexPage = () => {
         <div className="container">
           <nav className="d-flex justify-content-between">
             <h1> Med </h1>
-            {/* change this button dynamically todo */}
-            <>
-              {" "}
-              {/* this should be a link */}
-              <button className="cta">Open</button>
-            </>
           </nav>
 
           <AuthCard />
