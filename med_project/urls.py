@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from user_app.views import DonorListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('frontend_app.urls')),
     path('api/v1/user/', include('user_app.urls')),
+    path('api/v1/donors', DonorListView.as_view() )
 ]

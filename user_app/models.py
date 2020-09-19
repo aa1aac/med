@@ -42,6 +42,8 @@ class CustomUser(AbstractUser):
         choices=BLOOD_GROUP_CHOICES,
         blank=True
     )
+
+    wants_to_donate = models.BooleanField(null=True, blank=True)
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

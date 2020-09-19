@@ -14,14 +14,15 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ('email',)
 
     fieldsets = (
-        (None, {'fields': ('full_name', 'email', 'password', 'blood_group')}),
+        (None, {'fields': ('full_name', 'email', 'password', 'blood_group', 'wants_to_donate')}),
         ('Permissions', {'fields': ('is_staff', 'is_active')})
     )
 
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('full_name', 'email', 'password1', 'password2', 'blood_group', 'is_staff', 'is_active')
+            'fields': ('full_name', 'email', 'password1', 'password2', 'blood_group',
+                        'wants_to_donate','is_staff', 'is_active')
         }),
     )
 

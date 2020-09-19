@@ -7,3 +7,8 @@ class UserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ['user_id', 'email', 'full_name', 'blood_group']
 
+
+class DonorUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['blood_group', 'email']
