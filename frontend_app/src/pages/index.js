@@ -28,7 +28,7 @@ const IndexPage = () => {
             </p>
           </div>
           <img
-            src="/static/frontend/image/anywhere.jpg"
+            src="/static/frontend/image/2.jpg"
             className="col-sm-12 col-md-6 col-lg-6 "
             alt="find blood"
           />
@@ -47,7 +47,7 @@ const IndexPage = () => {
           </div>
 
           <img
-            src="/static/frontend/image/enjoy.jpg"
+            src="/static/frontend/image/3.jpg"
             className="col-sm-12 col-md-6 col-lg-6"
             alt="find doctors"
           />
@@ -65,7 +65,7 @@ const IndexPage = () => {
             </p>
           </div>
           <img
-            src="/static/frontend/image/explore.jpg"
+            src="/static/frontend/image/4.jpg"
             className="col-sm-12 col-md-6 col-lg-6 "
             alt="manage resource "
           />
@@ -84,7 +84,7 @@ const IndexPage = () => {
           </div>
 
           <img
-            src="/static/frontend/image/graduation.jpg"
+            src="/static/frontend/image/5.jpg"
             className="col-sm-12 col-md-6 col-lg-6 "
             alt="get help"
           />
