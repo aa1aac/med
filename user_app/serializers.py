@@ -12,3 +12,9 @@ class DonorUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ['blood_group', 'full_name', 'email']
+
+
+class UserUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['blood_group','wants_to_donate']
