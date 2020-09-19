@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import AuthCard from "../component/AuthCard/IndexCard";
+
 const IndexPage = () => {
   return (
     <>
@@ -11,9 +13,11 @@ const IndexPage = () => {
             <h1> Med </h1>
             {/* change this button dynamically todo */}
             <Link to="/auth">
-              <button className="cta">Login</button>
+              <button className="cta">Open</button>
             </Link>
           </nav>
+
+          <AuthCard />
         </div>
       </div>
 

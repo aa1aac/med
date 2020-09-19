@@ -9,7 +9,7 @@ import Routing from "./Routing";
 const App = () => {
   return (
     <Router>
-      <Switch>
+      <Switch>  
         <Routing />
       </Switch>
     </Router>

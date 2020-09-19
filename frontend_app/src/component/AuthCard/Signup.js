@@ -22,7 +22,7 @@ const Signup = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="form-control bg-dark text-white"
+            className="form-control "
             id="name"
             placeholder="Name"
             required
@@ -35,7 +35,7 @@ const Signup = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="form-control bg-dark text-white"
+            className="form-control "
             id="email"
             placeholder="Email"
             required
@@ -48,7 +48,7 @@ const Signup = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            className="form-control bg-dark text-white"
+            className="form-control "
             id="password"
             placeholder="Password"
             required
@@ -61,7 +61,7 @@ const Signup = () => {
             value={confirm}
             onChange={(e) => setConfirm(e.target.value)}
             type="password"
-            className="form-control bg-dark text-white"
+            className="form-control "
             id="confirm"
             placeholder="Confirm Password"
             required
@@ -74,7 +74,7 @@ const Signup = () => {
             value={type}
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="form-control bg-dark text-white"
+            className="form-control "
             id="name"
             placeholder="blood type"
             

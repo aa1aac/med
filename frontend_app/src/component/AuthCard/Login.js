@@ -23,7 +23,7 @@ const Login = (props) => {
             onChange={(e) => setEmail(e.target.value)}
             required
             type="email"
-            className="form-control bg-dark text-white"
+            className="form-control"
             id="email"
             placeholder="Email"
           />
@@ -36,7 +36,7 @@ const Login = (props) => {
             onChange={(e) => setPassword(e.target.value)}
             required
             type="password"
-            className="form-control bg-dark text-white"
+            className="form-control"
             id="password"
             placeholder="Password"
           />

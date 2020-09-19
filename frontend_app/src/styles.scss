@@ -33,27 +33,29 @@ $dark: $gray-800 !default;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
 .index_hero {
-  width: 100%;
-  height: 40em;
-  margin-bottom: 1em;
-  background-image: url(/static/frontend/image/1.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  // width: 100%;
+  // height: 40em;
+  // margin-bottom: 1em;
+  // background-image: url(/static/frontend/image/image1.jpg);
+  // background-size: 100% 100%;
+  // background-repeat: no-repeat;
 
   h1 {
     font-weight: 700;
-    color: $white;
+
+    color: $dark;
   }
 
   button.cta {
     font-weight: 700;
-    color: $white;
+    background-color: $primary;
     margin: 1em;
     width: 6em;
     border-radius: 2em;
-    color: black;
+    color: $white;
     padding: 0.4em;
+    outline: none;
+    border: none;
   }
 }
