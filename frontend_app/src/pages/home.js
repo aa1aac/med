@@ -17,10 +17,12 @@ const home = () => {
   };
 
   return (
-    <div className="container row">
-      {donors.map((donor) => (
-        <Donor donor={donor} />
-      ))}
+    <div className="container mt-5">
+      <div className="row">
+        {donors.map((donor) => (
+          <Donor donor={donor} />
+        ))}
+      </div>
     </div>
   );
 };
