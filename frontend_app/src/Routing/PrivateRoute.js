@@ -3,7 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 
 import userContext from "../context/user/UserContext";
 
-const NonPrivateRoute = ({ component: Component, ...rest }) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   const UserContext = useContext(userContext);
 
   const { user_id } = UserContext;
@@ -12,10 +12,10 @@ const NonPrivateRoute = ({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={(props) =>
-        user_id ? <Redirect to="/home" /> : <Component {...props} />
+        !user_id ? <Redirect to="/" /> : <Component {...props} />
       }
     />
   );
 };
 
-export default NonPrivateRoute;
+export default PrivateRoute;
