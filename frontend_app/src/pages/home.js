@@ -20,7 +20,7 @@ const home = () => {
     <div className="container mt-5">
       <div className="row">
         {donors.map((donor) => (
-          <Donor donor={donor} />
+          <Donor donor={donor} key={donor.email} />
         ))}
       </div>
     </div>
