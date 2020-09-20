@@ -15,21 +15,22 @@ $blue: #007bff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
-$red: #dc3545 !default;
+$red: #b20d30 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #28a745 !default;
+$green: #3f7d20 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
-$primary: #1818c9;
-$secondary: #68d864;
+$primary: #2f3858;
+$secondary: #d81e5e;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
-$dark: $gray-800 !default;
+// $dark: $gray-800 !default;
+$dark: #2F4858 !default;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
