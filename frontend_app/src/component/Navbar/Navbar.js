@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { withRouter, Link } from "react-router-dom";
 import { Navbar, Nav, Modal } from "react-bootstrap";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 import userContext from "../../context/user/UserContext";
 
@@ -46,20 +48,21 @@ const NavigationBar = (props) => {
             <Link to="/home" className="nav-link">
               home
             </Link>
-          </Nav>
-          <Nav className="ml-auto">
-            <button
-              className="nav-item btn btn-secondary"
-              onClick={UserContext.userLogout}
-            >
-              Logout
-            </button>
 
             <button
               className="nav-item btn btn-secondary"
               onClick={() => setShow(true)}
             >
               Update info
+            </button>
+          </Nav>
+
+          <Nav className="ml-auto">
+            <button
+              className="nav-item btn btn-secondary m-1"
+              onClick={UserContext.userLogout}
+            >
+              Logout
             </button>
           </Nav>
         </Navbar.Collapse>
@@ -76,21 +79,25 @@ const NavigationBar = (props) => {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={onSubmit}>
-
-             <div  className="form-group">
-                    <label for="bloodGroup">Blood Group</label>
-                    <select multiple  className="form-control" id="bloodGroup" value={bloodGroup ? bloodGroup : " "} onChange={(e) => setBloodGroup(e.target.value)}>
-                          <option value="A+">A+</option>
-                          <option value="B+">B+</option>
-                          <option value="O+">O+</option>
-                          <option value="AB+">AB+</option>
-                          <option value="A-">A-</option>
-                          <option value="B-">B-</option>
-                          <option value="O-">O-</option>
-                          <option value="AB-">AB-</option>
-                          <option value=" "> -- </option>
-                      </select>
-                </div>
+            <div className="form-group">
+              <label htmlFor="bloodGroup">Blood Group</label>
+              <select
+                className="form-control"
+                id="bloodGroup"
+                value={bloodGroup ? bloodGroup : " "}
+                onChange={(e) => setBloodGroup(e.target.value)}
+              >
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="O-">O-</option>
+                <option value="AB-">AB-</option>
+                <option value=" "> -- </option>
+              </select>
+            </div>
 
             <button className="btn btn-secondary" type="submit">
               {" "}
