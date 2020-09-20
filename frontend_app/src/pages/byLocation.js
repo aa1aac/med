@@ -25,7 +25,7 @@ class ByLocation extends Component {
   render() {
     if (this.state.lat && this.state.lng) {
       return (
-        <div className="container">
+        <div>
           <Map location={{ lat: this.state.lat, lng: this.state.lng }} />
         </div>
       );
