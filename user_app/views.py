@@ -54,8 +54,11 @@ class SendNotificationView(APIView):
     
     permission_classes = [permissions.IsAuthenticated]
 
-    def post(self, request, pk):
-        receiver = CustomUser.objects.get(pk=pk)
+    def post(self, request, email):
+        try:
+            receiver = CustomUser.objects.get(email=email)
+        except:
+            raise Http404('No user found with such email')
         address = os.environ.get('EMAIL_HOST_USER')
         password = os.environ.get('EMAIL_HOST_PASSWORD')
 
@@ -72,7 +75,7 @@ class SendNotificationView(APIView):
 
             msg = f'subject:{subject}\n\n{body}'
 
-            smtp.sendmail(address, receiver.email, msg)
+            smtp.sendmail(address, receiver, msg)
 
         return Response(status=status.HTTP_200_OK)
 

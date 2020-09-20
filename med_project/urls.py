@@ -24,5 +24,5 @@ urlpatterns = [
     path('api/v1/user/', include('user_app.urls')),
     path('api/v1/donors', DonorListView.as_view()),
     path('api/v1/donors/<blood_group>', CompatibleDonorListView.as_view()),
-    path('api/v1/send_email/<uuid:pk>', SendNotificationView.as_view())
+    path('api/v1/send_email/<email>', SendNotificationView.as_view())
 ]
