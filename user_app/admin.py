@@ -14,7 +14,7 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ('email',)
 
     fieldsets = (
-        (None, {'fields': ('full_name', 'email', 'password', 'blood_group', 'wants_to_donate')}),
+        (None, {'fields': ('full_name', 'email', 'password', 'blood_group')}),
         ('Permissions', {'fields': ('is_staff', 'is_active')})
     )
 
@@ -22,7 +22,7 @@ class CustomUserAdmin(UserAdmin):
         (None, {
             'classes': ('wide',),
             'fields': ('full_name', 'email', 'password1', 'password2', 'blood_group',
-                        'wants_to_donate','is_staff', 'is_active')
+                        'is_staff', 'is_active')
         }),
     )
 
