@@ -7,6 +7,7 @@ import PrivateRoute from "./PrivateRoute";
 
 import IndexPage from "../pages/index";
 import HomePage from "../pages/home";
+import ByLocation from '../pages/byLocation'
 
 export default () => {
   const UserContext = useContext(userContext);
@@ -18,6 +19,7 @@ export default () => {
   return (
     <>
       <PrivateRoute path="/home" exact component={HomePage} />
+      <PrivateRoute path="/by-location" exact component={ByLocation} />
 
       <NonPrivateRoute path="/" exact component={IndexPage} />
     </>

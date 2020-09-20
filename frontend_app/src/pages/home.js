@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import Donor from "../component/Donor/Donor";
-import SimpleMap from "../component/Map/simplemap";
 
 const home = () => {
   const [donors, setDonors] = useState([]);
@@ -23,11 +22,6 @@ const home = () => {
         {donors.map((donor) => (
           <Donor donor={donor} key={donor.email} />
         ))}
-      </div>
-      <div>
-        {
-          <SimpleMap/>
-        }
       </div>
     </div>
   );

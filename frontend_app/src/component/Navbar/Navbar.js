@@ -55,6 +55,11 @@ const NavigationBar = (props) => {
             >
               Update info
             </button>
+
+            <Link to="/by-location" className="active nav-link">
+              <i className="fa fa-location-arrow"> </i>
+              Find by location
+            </Link>
           </Nav>
 
           <Nav className="ml-auto">
