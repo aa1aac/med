@@ -40,12 +40,15 @@ const NavigationBar = (props) => {
     <>
       <Navbar bg="primary" expand="lg" variant="dark">
         <Link className="navbar-brand" to="/home">
-          Med
+          <h4>
+            <i className="fa fa-ambulance"> </i> Raktadaan
+          </h4>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Link to="/home" className="nav-link">
+            <Link to="/home" className="nav-link active">
+              <i className="fa fa-home"></i>
               home
             </Link>
 
@@ -53,7 +56,7 @@ const NavigationBar = (props) => {
               className="nav-item btn btn-secondary"
               onClick={() => setShow(true)}
             >
-              Update info
+              <i className="fa fa-edit"></i> Update info
             </button>
           </Nav>
 
@@ -62,7 +65,7 @@ const NavigationBar = (props) => {
               className="nav-item btn btn-secondary m-1"
               onClick={UserContext.userLogout}
             >
-              Logout
+              <i className="fa fa-user-times"></i> Logout
             </button>
           </Nav>
         </Navbar.Collapse>

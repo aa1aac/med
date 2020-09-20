@@ -10,7 +10,10 @@ const IndexPage = () => {
       <div className="index_hero">
         <div className="container">
           <nav className="d-flex justify-content-between">
-            <h1> Med </h1>
+            <h1>
+              {" "}
+              Raktadaan <i className="fa fa-ambulance"> </i>{" "}
+            </h1>
           </nav>
 
           <AuthCard />

@@ -12,8 +12,7 @@ const Donor = ({ donor }) => {
           className="btn btn-secondary text-dark"
           href={`mailto:${donor.email}`}
         >
-          {" "}
-          Contact{" "}
+          <i className="fa fa-envelope"></i> Contact{" "}
         </a>
       </div>
     </div>

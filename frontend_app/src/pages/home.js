@@ -37,7 +37,8 @@ const home = () => {
         <select
           className="form-control"
           id="bloodGroup"
-          value={bloodGroup ? bloodGroup : " "}
+          value={bloodGroup ? bloodGroup : ""}
+          placeholder="search by blood group"
           onChange={(e) => {
             setBloodGroup(e.target.value);
             fetchByGroup();
@@ -51,6 +52,7 @@ const home = () => {
           <option value="B-">B-</option>
           <option value="O-">O-</option>
           <option value="AB-">AB-</option>
+          <option value="">--</option>
         </select>
       </div>
       <div className="row">
