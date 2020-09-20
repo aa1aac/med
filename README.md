@@ -1,6 +1,6 @@
-# Med
+# Raktadaan
 
-This is a medical app.
+This app helps people find blood donations and contact with them directly. We built this app for HRX hakathon. 
 
 ## Environment Setup
 
