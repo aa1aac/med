@@ -15,6 +15,11 @@ class DonorUserSerializer(serializers.ModelSerializer):
 
 
 class UserUpdateSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta: 
         model = CustomUser
-        fields = ['blood_group','wants_to_donate']
+        fields = ['blood_group']
+    
+    def validate(self, data):
+        if len(data) > 1 or 'blood_group' not in data:
+            raise serializers.ValidationError("Values other than blood_group were provided")
+        return data

@@ -18,7 +18,7 @@ class DonorListView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, format=None):
-        queryset = CustomUser.objects.filter(wants_to_donate=True)
+        queryset = CustomUser.objects.exclude(blood_group="").exclude(user_id=request.user.user_id)
         serializer = DonorUserSerializer(queryset, many=True)
         return Response(serializer.data) 
 
@@ -28,8 +28,8 @@ class CompatibleDonorListView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, blood_group, format=None):
-        queryset = CustomUser.objects.filter(blood_group=blood_group)
-        queryset = queryset.objects.filter(wants_to_donate=True)
+        queryset = CustomUser.objects.filter(blood_group=blood_group).exclude(user_id=request.
+                                             user.user_id)
         serializer = DonorUserSerializer(queryset, many=True)
         return Response(serializer.data)
 
