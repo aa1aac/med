@@ -23,3 +23,6 @@ class UserUpdateSerializer(serializers.ModelSerializer):
         if len(data) > 1 or 'blood_group' not in data:
             raise serializers.ValidationError("Values other than blood_group were provided")
         return data
+
+class EmailSerializer(serializers.Serializer):
+    receiver = serializers.EmailField()
