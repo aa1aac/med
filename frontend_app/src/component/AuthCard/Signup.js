@@ -79,21 +79,8 @@ const Signup = () => {
           />
         </div>
 
-        {/* <div className="form-group">
-          <label htmlFor="name">Blood Group</label>
-          <input
-            value={type}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            className="form-control "
-            id="name"
-            placeholder="blood type"
-            
-          />
-        </div> */}
-
         <button type="submit" className="btn btn-primary btn-block">
-          Signup
+          <i className="fa fa-user-plus"> </i> Signup
         </button>
       </form>
     </div>

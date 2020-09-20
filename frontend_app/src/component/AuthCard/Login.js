@@ -1,18 +1,18 @@
 import React, { useState, useContext } from "react";
 
-import userContext from '../../context/user/UserContext'
+import userContext from "../../context/user/UserContext";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const UserContext = useContext(userContext)
+  const UserContext = useContext(userContext);
 
   const onLogin = (e) => {
     e.preventDefault();
 
     if (email && password) {
-      UserContext.userLogin({email, password})
+      UserContext.userLogin({ email, password });
     }
   };
 
@@ -47,7 +47,7 @@ const Login = (props) => {
         </div>
 
         <button type="submit" className="btn btn-primary btn-block">
-          Login
+          <i className="fa fa-user"> </i> Login
         </button>
       </form>
     </div>
