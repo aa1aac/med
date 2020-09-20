@@ -6,8 +6,7 @@ from .managers import CustomUserManager
 
 class CustomUser(AbstractUser):
 
-    # disable the username field inherited from AbstractUser
-    username = None
+    username = models.CharField(max_length=255, blank=True)
 
     user_id = models.UUIDField(
         primary_key=True, 
@@ -42,7 +41,10 @@ class CustomUser(AbstractUser):
         choices=BLOOD_GROUP_CHOICES,
         blank=True
     )
-    
+
+    latitude = models.FloatField(blank=True, null=True)
+    longitude = models.FloatField(blank=True, null=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = CustomUserManager()

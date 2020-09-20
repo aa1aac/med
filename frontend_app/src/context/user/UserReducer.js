@@ -12,7 +12,7 @@ export default (state, action) => {
         ...state,
         email: null,
         user_id: null,
-        full_name: null,
+        username: null,
         blood_group: null,
       };
     default:
