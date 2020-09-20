@@ -12,7 +12,7 @@ const UserState = (props) => {
   let initialState = {
     email: null,
     user_id: null,
-    full_name: null,
+    username: null,
     blood_group: null,
   };
 
@@ -68,13 +68,13 @@ const UserState = (props) => {
       });
   };
 
-  const userSignup = ({ email, password1, password2, full_name }) => {
+  const userSignup = ({ email, password1, password2, username}) => {
     axios
       .post("/api/v1/user/signup/", {
         email,
         password1,
         password2,
-        full_name,
+        username,
       })
       .then((res) => {
         dispatch({ type: SIGNUP_USER, payload: res.data.key });
@@ -110,7 +110,7 @@ const UserState = (props) => {
         userSignup,
         email: state.email,
         user_id: state.user_id,
-        full_name: state.full_name,
+        username: state.username,
         blood_group: state.blood_group,
       }}
     >

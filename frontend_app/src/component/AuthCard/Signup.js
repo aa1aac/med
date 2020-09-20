@@ -15,7 +15,7 @@ const Signup = () => {
 
     if (name && email && password && confirm) {
       UserContext.userSignup({
-        full_name: name,
+        username: name,
         email,
         password1: password,
         password2: confirm,

@@ -5,13 +5,13 @@ from user_app.models import CustomUser
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ['user_id', 'email', 'full_name', 'blood_group']
+        fields = ['user_id', 'email', 'username', 'blood_group']
 
 
 class DonorUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ['blood_group', 'full_name', 'email']
+        fields = ['blood_group', 'username', 'email']
 
 
 class UserUpdateSerializer(serializers.ModelSerializer):

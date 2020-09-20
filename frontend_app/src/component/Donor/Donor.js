@@ -7,7 +7,7 @@ const Donor = ({ donor }) => {
         <h4> Blood Group : {donor.blood_group}</h4>
       </div>
       <div className="card-body">
-        <h5 className="card-title">{donor.full_name}</h5>
+        <h5 className="card-title">{donor.username}</h5>
         <a
           className="btn btn-secondary text-dark"
           href={`mailto:${donor.email}`}
