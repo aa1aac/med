@@ -42,7 +42,10 @@ class CustomUser(AbstractUser):
         choices=BLOOD_GROUP_CHOICES,
         blank=True
     )
-    
+
+    latitude = models.FloatField(blank=True, null=True)
+    longitude = models.FloatField(blank=True, null=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
     objects = CustomUserManager()
