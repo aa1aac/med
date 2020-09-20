@@ -15,9 +15,9 @@ const IndexPage = () => {
               Raktadaan <i className="fa fa-ambulance"> </i>{" "}
             </h1>
           </nav>
-
-          <AuthCard />
         </div>
+
+        <AuthCard />
       </div>
 
       {/* find blood */}

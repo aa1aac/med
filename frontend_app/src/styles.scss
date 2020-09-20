@@ -48,6 +48,10 @@ $dark: #2f4858 !default;
     color: $dark;
   }
 
+  .card {
+    border: none;
+  }
+
   button.cta {
     font-weight: 700;
     background-color: $primary;

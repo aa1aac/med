@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import Donor from "../component/Donor/Donor";
 
@@ -18,16 +19,20 @@ const home = () => {
   };
 
   const fetchByGroup = () => {
-    setDonors([]);
-    axios
-      .get(`/api/v1/donors/${bloodGroup}`)
-      .then((res) => {
-        setDonors(res.data);
-      })
-      .catch((e) => {
-        console.error(e);
-        toast.error("Uh Oh! some error occured fetching the data");
-      });
+    if (!bloodGroup.trim()) {
+      return toast.error(" the search field cannot be blank");
+    } else {
+      setDonors([]);
+      axios
+        .get(`/api/v1/donors/${bloodGroup}`)
+        .then((res) => {
+          setDonors(res.data);
+        })
+        .catch((e) => {
+          console.error(e);
+          toast.error("Uh Oh! some error occured fetching the data");
+        });
+    }
   };
 
   return (
@@ -37,11 +42,10 @@ const home = () => {
         <select
           className="form-control"
           id="bloodGroup"
-          value={bloodGroup ? bloodGroup : ""}
+          value={bloodGroup ? bloodGroup : " "}
           placeholder="search by blood group"
           onChange={(e) => {
             setBloodGroup(e.target.value);
-            fetchByGroup();
           }}
         >
           <option value="A+">A+</option>
@@ -52,8 +56,16 @@ const home = () => {
           <option value="B-">B-</option>
           <option value="O-">O-</option>
           <option value="AB-">AB-</option>
-          <option value="">--</option>
-        </select>
+          <option value=" ">--</option>
+        </select>{" "}
+        <button
+          onClick={fetchByGroup}
+          className="btn btn-outline-primary btn-block d-block mt-3"
+        >
+          {" "}
+          <i className="fa fa-search"></i>
+          Search
+        </button>
       </div>
       <div className="row">
         {donors.map((donor) => (
